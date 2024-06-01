@@ -17,7 +17,7 @@ class GitHubWrapper(GitWrapper):
         self.git_url = git_url
         self.git_token = git_token
 
-        auth = Auth.Token("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")
+        auth = Auth.Token(git_token)
         self.github_api = Github(auth=auth)
 
     def get_http_url_by_project_id(self, id_project):
